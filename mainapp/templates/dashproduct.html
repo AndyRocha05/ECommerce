@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>Dashboard</h1>
+  <h2>Orders</h2>
+  <h3>Products</h3>
+
+  <table>
+    <thead>
+      <tr>
+        <td><img src="{% static 'img/download.png'%}" alt=""></td>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Inventory Count</td>
+        <td>Quantity sold</td>
+      </tr>
+    </thead>
+    <tbody>
+      {% for show in all_shows %}
+        <tr>
+          <td>{{}}</td>
+          <td>{{}}</td>
+          <td>{{}}</td>
+          <td>{{}}</td>
+          <td>{{}}</td>
+          <td>
+            <a href="/edit">Edit</a>
+            <a href="/delete">Delete</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</body>
+</html>

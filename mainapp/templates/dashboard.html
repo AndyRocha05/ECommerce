@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}"> 
+</head>
+<body>
+    <header>
+        <h1>Dashboard</h1>
+        <h2><a class= "nav" href="#">Orders</a></h2>
+        <h2><a class= "nav" href="#">Products</a></h2>
+        <h2 class="log" ><a class="nav1"  href="#">Log off</a></h2>
+        </header>
+        <div class= "topsearch"><input type="search" name="" id="" placeholder="Search"><input type="submit" value="search"></div>
+        <div class= "topselect">
+            <select name="status" id="status">show all
+            <option value="inprocess" name="inprocess">Order in Process</option>
+            <option value="shipped" name="shipped">Shipped</option>
+            <option value="cancelled" name="cancelled">Cancelled</option>
+        </select>
+        </div>
+    <table id="t01">
+        <tr>
+        <th>Order ID</th>
+        <th>Name</th> 
+        <th>Date</th>
+        <th>Billing Address</th>
+        <th>Total</th>
+        <th>Status</th>
+        </tr>
+        <tr>
+        <td>1</a></td>
+        <td>bob</td>
+        <td>dateit was </td>
+        <td>some kind of address</td>
+        <td>$19.99</td>
+        <td> 
+            <select name="status" id="status">
+                <option value="inprocess" name="inprocess">Order in Process</option>
+                <option value="shipped" name="shipped">Shipped</option>
+                <option value="cancelled" name="cancelled">Cancelled</option>
+            </select>
+        </td>
+        <tr>
+        <td>1</a></td>
+        <td>bob</td>
+        <td>dateit was </td>
+        <td>some kind of address</td>
+        <td>$19.99</td>
+        <td> 
+            <select name="status" id="status">
+                <option value="inprocess" name="inprocess">Order in Process</option>
+                <option value="shipped" name="shipped">Shipped</option>
+                <option value="cancelled" name="cancelled">Cancelled</option>
+            </select>
+        </td>
+        <tr>
+        <td>1</a></td>
+        <td>bob</td>
+        <td>dateit was </td>
+        <td>some kind of address</td>
+        <td>$19.99</td>
+        <td> 
+            <select name="status" id="status">
+                <option value="inprocess" name="inprocess">Order in Process</option>
+                <option value="shipped" name="shipped">Shipped</option>
+                <option value="cancelled" name="cancelled">Cancelled</option>
+            </select>
+        </td>
+       
+    
+    </table>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Info</title>
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/product_info_style.css' %}"> 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.sub_img').click(function() {
+                $('#main_img').attr('src', "{% static 'img/python' %}"+$(this).attr('img_id')+'.png')
+            });
+        });
+    </script>
+</head>
+<body>
+    <main>
+
+        <header>
+            <h1 id="main_header">Corona swag</h1>
+            <a id="cart_link" href="/cart">Shopping Cart (x)</a>
+        </header>
+        
+        <div id="content">
+            <a id="back_button" href="/">Go Back</a>
+            <h1 id="product_name">{{product.name}}</h1>
+
+            <div id="img_panel">
+                <img id="main_img" src="{% static 'img/python1.png' %}" alt="Product Name" height="280" width="280">
+
+                <input type="image" class="sub_img" alt="Product Picture 1" src="{% static 'img/python1.png' %}" img_id=1>
+                <input type="image" class="sub_img" alt="Product Picture 2" src="{% static 'img/python2.png' %}" img_id=2>
+                <input type="image" class="sub_img" alt="Product Picture 3" src="{% static 'img/python3.png' %}" img_id=3>
+                <input type="image" class="sub_img" alt="Product Picture 4" src="{% static 'img/python4.png' %}" img_id=4>
+                <input type="image" class="sub_img" alt="Product Picture 5" src="{% static 'img/python5.png' %}" img_id=5>
+            </div>
+
+            <p id="desc">{{product.desc}}</p>
+            <form action="place_order" method="POST">
+                <label for="selecter">$ {{product.price}}</label>
+                <select id="selecter">
+                    <option>1 </option>
+                    <option>2 </option>
+                    <option>3 </option>
+                    <option>4 </option>
+                    <option>5 </option>
+                </select>
+                <button type="submit">&nbsp;Add to Cart&nbsp;</button>
+            </form>
+
+            <h2>Similar Items</h2>
+            <div class="product_div">
+                <form action="#">
+                    <input type="image" class="product_ico" alt="Other Product" src="{% static 'img/HTML.png' %}">
+                    <p class="ico_price">$19.99</p>
+                </form>
+                <p>HTML Product</p>
+            </div>
+
+            <div class="product_div">
+                <form action="#">
+                    <input type="image" class="product_ico" alt="Other Product" src="{% static 'img/jQuery.png' %}">
+                    <p class="ico_price">$19.99</p>
+                </form>
+                <p>jQuery Product</p>
+            </div>
+
+            <div class="product_div">
+                <form action="#">
+                    <input type="image" class="product_ico" alt="Other Product" src="{% static 'img/JavaScript.png' %}">
+                    <p class="ico_price">$19.99</p>
+                </form>
+                <p>JavaScript Product</p>
+            </div>
+
+            <div class="product_div">
+                <form action="#">
+                    <input type="image" class="product_ico" alt="Other Product" src="{% static 'img/HTML.png' %}">
+                    <p class="ico_price">$19.99</p>
+                </form>
+                <p>Different Product</p>
+            </div>
+
+            <div class="product_div">
+                <form action="#">
+                    <input type="image" class="product_ico" alt="Other Product" src="{% static 'img/jQuery.png' %}">
+                    <p class="ico_price">$19.99</p>
+                </form>
+                <p>Another Product</p>
+            </div>
+
+            <div class="product_div">
+                <form action="#">
+                    <input type="image" class="product_ico" alt="Other Product" src="{% static 'img/JavaScript.png' %}">
+                    <p class="ico_price">$19.99</p>
+                </form>
+                <p>Product 3 Product</p>
+            </div>
+
+
+
+        </div>
+
+
+    </main>
+</body>
+</html>
+

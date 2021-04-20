@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+
+
+
+</head>
+<body>
+    <header>
+    </header>
+    <div id= "midnav" >
+        <h1>Corona swag</h1>
+        <a href="/cart"><h2>shopping Cart</h2></a>
+    </div>
+    <header id= "bheader">
+        <a class ="nav" href="#">Sweaters</a>
+        <a class ="nav" href="#">T Shirts</a>
+        <a class ="nav" href="#">Masks</a>
+        <a class ="nav" href="#">Mugs</a>
+        <a class ="nav" href="#">Cups</a>
+
+    </header>
+<main>
+    <div class="rightcontainer">
+
+        {% for product in products %}
+        
+        <div class="product_div">
+            <a href="/products/show/{{product.id}}">
+            <input type="image" class="product_ico" alt="Other Product" src="{% static 'img/HTML.png' %}">
+        </a>
+            <p class="ico_price">${{product.price}}</p>
+
+            <p class="ico_undertext">{{product.name}}</p>  
+        </div>
+
+        {% endfor %}
+
+
+
+
+
+    </div>
+</main>
+</body>
+</html>

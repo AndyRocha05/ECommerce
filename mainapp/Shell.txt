@@ -1,0 +1,54 @@
+
+
+Category.objects.create(name="T-shirts")
+Category.objects.create(name="Sweaters")
+Category.objects.create(name="Masks")
+Category.objects.create(name="Mugs")
+Category.objects.create(name="Cups")
+
+
+
+
+Product.objects.get(id=1).ted_at
+
+
+
+
+
+t_shirt_cat = Category.objects.filter(name="T-shirts")[0]
+Product.objects.create(name="Skull", category=t_shirt_cat, desc="T-Shirt with a Skull Design", price=19.99)
+Product.objects.create(name="Cloud", category=t_shirt_cat, desc="T-Shirt with a Cloud Design", price=15.99)
+Product.objects.create(name="Candy", category=t_shirt_cat, desc="T-Shirt with a Candy Design", price=12.99)
+Product.objects.create(name="rainbows, and unicorns", category=t_shirt_cat, desc="T-Shirt with unicorns protecting safe places for ever", price=1.92)
+
+sweater_cat = Category.objects.filter(name="Sweaters")[0]
+Product.objects.create(name="Ugly", category= sweater_cat, desc=" A very ugly sweater", price=9.99)
+Product.objects.create(name="Pretty", category= sweater_cat, desc=" A very pretty sweater", price=19.99)
+Product.objects.create(name="Normal", category= sweater_cat, desc=" A very normal sweater", price=29.99)
+
+mask_cat = Category.objects.filter(name="Masks")[0]
+Product.objects.create(name="ModeloVirus", category=mask_cat, desc="Protects you from Covid-19's knock-off competitor", price=14.99)
+Product.objects.create(name="Skull", category=mask_cat, desc="Skull mask, for all your based kids out there.", price=14.99)
+Product.objects.create(name="Day of the Dead", category=mask_cat, desc="A traditional Mexican mask.", price=49.99)
+Product.objects.create(name="TruSafety", category=mask_cat, desc="An airtight facemask. M-4000 quality.", price=79.99)
+Product.objects.create(name="The Duct Tape", category=mask_cat, desc="Literally just duct tape your mouth and nose.", price=29.99)
+
+mug_cat = Category.objects.filter(name="Mugs")[0]
+Product.objects.create(name="#1 Dad", category=mug_cat, desc="Every dad's FAVORITE gift.", price=5.99)
+Product.objects.create(name="#1 Mom", category=mug_cat, desc="Like #1 Dad but for Mom", price=7.99)
+Product.objects.create(name="Metal", category=mug_cat, desc="Metal coffee mug, for optimal thermal conductivity.", price=9.99)
+Product.objects.create(name="Safety in Hand", category=mug_cat, desc="Warning cup", price=10.99)
+Product.objects.get(id=4).price
+
+cup_cat = Category.objects.filter(name="Cups")[0]
+Product.objects.create(name="Blue Solo Cup", category=cup_cat, desc="Each Sold separately", price=4.99)
+Product.objects.create(name="Red Solo Cup", category=cup_cat, desc="Each Sold separately", price=4.20)
+Product.objects.create(name="Green Solo Cup", category=cup_cat, desc="sold separately", price=5.99)
+
+Admin.objects.create(email="admin@login.com", password="anon")
+
+
+python manage.py makemigrations mainapp
+
+
+Categories: 

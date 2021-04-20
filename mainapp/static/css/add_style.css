@@ -1,0 +1,107 @@
+
+* {
+    margin: 0px;
+    padding: 0px;
+  }
+  
+  .form{
+    /* text-align: center; */
+    margin: 0px auto;
+    width: 500px;
+    /* height: 350px; */
+    margin-top: 10px;
+    border: 2px solid black;
+  }
+  
+  header{
+    background-color:rgb(167, 54, 54);
+    color:white;
+    width: auto;
+    height: 85px;
+  }
+  h1{
+    display:inline-block;
+    margin-left: 10px;
+    margin-top: 20px;
+
+  }
+
+  #nav1 {
+    display: inline-block;
+    vertical-align: top;
+    color: white;
+    margin-left: 900px;
+    text-decoration: none;
+
+ }
+
+  #log{
+    display: inline-block;
+    color: white;
+    
+  }
+
+
+
+  form{
+    margin-top: 10px;
+  }
+  
+  label {
+    margin-left: 100px;
+  }
+  
+  input {
+    margin-bottom: 10px;
+  }
+  
+  select {
+    margin-bottom: 10px;
+  }
+  
+  #name {
+    margin-left: 91px;
+  }
+  
+  #desc_label {
+    margin-left: 100px;
+    display: inline-block;
+    vertical-align: top;
+  }
+  
+  #desc {
+    /* margin-left: 235px; */
+    resize: none;
+    height: 60px;
+    display: inline-block;
+    margin-top:20px;
+    margin-left: 55px;
+    margin-bottom: 20px;
+    
+  }
+  
+  #add_new_category {
+      margin-right: 40px;
+  }
+
+  
+
+  
+  button{
+    margin-left:10px;
+    /* background-color: red; */
+  }
+
+
+  
+
+
+  #cancel_button {
+    margin-left: 300px;
+    display: inline-block;
+  }
+
+  #create_button {
+    display: inline-block;
+    /* margin-left: 300px; */
+  }

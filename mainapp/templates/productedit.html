@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/productedit.css' %}" />
+  <title>Document</title>
+</head>
+<body>
+  <header class="header">
+    <h1>Edit Product</h1>
+    <h2 class="log" ><a class="nav1"  href="#">Log off</a></h2>
+  </header>
+    <div class="form">
+      <h1>Edit Product - Id</h1>
+      <form id="edit_form" action="dashboard/product/edit" method="POST">
+        {% csrf_token %}
+        <label for="name"> Name:</label>
+        <input type="text" name="name" id="name" value="{{product.name}}"><br>
+
+        <p id='desc_label'>Description:</p>
+        <textarea name="desc" id="desc">{{product.desc}}</textarea>
+
+
+        <label for="categories">Categories:</label>
+        <select name="categories" id="categories">
+            <option value="none">Select one</option>
+          {% for category in categories %}
+            {% if category.name == product.category.name %}
+              <option value="{{category.id}}" selected>{{category.name}}</option>
+            {% else %}
+              <option value="{{category.id}}">{{category.name}}</option>
+            {% endif %}
+          {% endfor %}
+        </select>
+
+        <label for="add_new_category">or add new category:</label>
+        <input type="text" name="add_new_category" id="add_new_category">
+
+      </form>
+      
+
+
+      <form action='upload_image' method='POST'>
+        <label for="img_upload">Images</label>
+        <input type="file" id="img" name="img" accept="image/*">
+        <input type="submit">
+      </form>
+
+      <form id="cancel_button" action="#">
+        <button type="submit">Cancel</button>
+      </form>
+
+      <form id="preview_button" action="#">
+        <button type="submit">Preview</button>
+      </form>
+
+
+      <button form="edit_form" id="update_button" type="submit">Update</button>
+
+
+    </div>
+    <ul class="messages">
+      {% for message in messages %}
+      <li {% if message.tags %}class="{{message.tags}}"{% endif %}>{{message}}</li>
+      {% endfor %}
+    </ul>
+</body>
+</html>

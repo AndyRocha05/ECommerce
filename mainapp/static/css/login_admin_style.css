@@ -1,0 +1,49 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 16pt;
+}
+
+main {
+    margin: 0px auto;
+    width: 400px;
+}
+
+div {
+    width: 600px;
+    /* height: 200px; */
+    /* outline: 2px solid black; */
+    margin-top: 100px;
+}
+
+p {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+input {
+    width: 250px;
+    margin-bottom: 10px;
+}
+
+#email_box_label {
+    margin-right: 150px;
+}
+
+#email_box {
+    margin-right: 50px;
+}
+
+#pw_box_label {
+    margin-right: 110px;
+}
+#pw_box {
+    margin-right: 60px;
+}
+button {
+    margin-left: 395px;
+    background-color: blue;
+    color: white;
+    margin-top: 15px;
+}

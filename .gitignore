@@ -1,0 +1,10 @@
+my_environments
+__pycache__
+django_projects
+
+*.log
+*.pot
+*.pyc
+__pycache__
+db.sqlite3
+media

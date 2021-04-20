@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Login</title>
+
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/login_admin_style.css' %}">
+</head>
+<body>
+    <main>
+        <div>
+            <p>Admin Login Page</p>
+
+            <form action="login_admin" method="POST">
+                <label id="email_box_label" for="email_box">Email:</label>
+                <input type="email" name="email" id="email_box">
+                <label id="pw_box_label" for="pw_box">Password:</label>
+                <input type="password" name="password" id="pw_box">
+                <button type="submit">&nbsp;Login&nbsp;&nbsp;</button>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
